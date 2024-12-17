@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Blog Post Manager</h1>
+    <div class="top-right-nav">
+      <a href="javascript:void(0)" id="home-link">Home</a> |
+      <a href="javascript:void(0)" id="add-new-post-link">Add New Post</a> |
+      <a href="javascript:void(0)" id="edit-post-link">Edit Posts</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Form to Add a New Post -->
+    <section id="new-post-section">
+      <h2>Add New Post</h2>
+      <form id="newPostForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="body" placeholder="Content" required></textarea>
+        <input type="file" id="image" accept="image/*">
+        <button type="submit">Add Post</button>
+      </form>
+    </section>
+
+    <!-- Section to Display Posts -->
+    <section id="posts-section">
+      <h2>Posts</h2>
+      <div id="posts"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Blog Post Manager</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

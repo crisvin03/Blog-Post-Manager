@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f3f4f7, #e9ecef); /* Subtle gradient background */
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(90deg, #0069d9, #0056b3); /* Gradient for a modern look */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth */
+  border-bottom: 3px solid #004085; /* Subtle separator */
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+header .top-right-nav {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+header .top-right-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background 0.3s ease-in-out;
+}
+
+header .top-right-nav a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+}
+
+/* Footer */
+footer {
+  background: #ddd;
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid #ccc;
+}
+
+/* Add New Post Form */
+#new-post-section {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Posts Section */
+#posts {
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center; /* Center-align the cards */
+  gap: 15px; /* Moderate gap between cards */
+}
+
+/* Individual Post Card */
+.post {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced depth for posts */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+  width: calc(30% - 20px); /* Ensure 3 cards per row with appropriate spacing */
+  max-width: 300px; /* Limit card size for uniformity */
+  box-sizing: border-box; /* Ensure padding and border don't expand size */
+  min-height: 400px; /* Fixed height for consistent card alignment */
+}
+
+.post:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow */
+}
+
+.post img.post-image {
+  max-width: 100%; /* Ensure full width within card */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  object-fit: cover; /* Keep images proportional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Better image depth */
+}
+
+/* Content Alignment for Title and Description */
+.post h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+  min-height: 50px; /* Fix title height for consistent spacing */
+}
+
+.post p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: auto; /* Push icons to the bottom */
+  min-height: 80px; /* Fix description height */
+}
+
+/* Post Actions Section (Icons Container) */
+.post-actions {
+  display: flex;
+  justify-content: center; /* Center-align the icons */
+  align-items: center;
+  gap: 15px; /* Equal spacing between icons */
+  margin-top: auto; /* Push icons to the bottom of the card */
+  width: 100%; /* Full width alignment */
+  height: 60px; /* Fixed height to align all icons */
+}
+
+button.post-action-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button.post-action-btn:hover {
+  background: #0056b3;
+}
+
+
+/* Icon Buttons */
+button.edit-btn,
+button.delete-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Equal size for all icons */
+  height: 40px;
+  font-size: 18px;
+  line-height: 1;
+  border: none;
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button.edit-btn::before {
+  content: '\f044'; /* Font Awesome edit icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+button.delete-btn::before {
+  content: '\f1f8'; /* Font Awesome trash icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+button.edit-btn:hover,
+button.delete-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Success Message */
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .post {
+    width: calc(45% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .post {
+    width: 90%; /* 1 card per row on small screens */
+  }
+}
